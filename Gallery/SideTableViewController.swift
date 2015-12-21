@@ -73,6 +73,7 @@ class SideTableViewController: UITableViewController {
         else{
             cell = tableView.dequeueReusableCellWithIdentifier("Topics", forIndexPath: indexPath)
             cell.textLabel?.text="I am The King"
+            cell.opaque = false
         }
         return cell
     }
