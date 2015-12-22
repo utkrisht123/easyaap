@@ -9,17 +9,19 @@
 import UIKit
 
 class SideTableViewController: UITableViewController {
-    
-
-    override func viewDidLoad() {
+    var TableArray = [String]()
+       override func viewDidLoad() {
         super.viewDidLoad()
-
+        TableArray = ["","Home", "Contact", "Settings", "Logout"]
+    tableView.separatorColor = UIColor .clearColor()
+        self.view.backgroundColor = UIColor(red: 0x48/255, green: 0x48/255, blue: 0x48/255, alpha: 1)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,44 +42,57 @@ class SideTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 5
+        
     }
    override func tableView(tableView: UITableView,
         heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
             if indexPath.row == 0 {
-                return 200 //Whatever fits your need for that cell
+                
+                return 220 //Whatever fits your need for that cell
             } else {
                 return 50 // other cell height
             }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+       
         var cell : UITableViewCell = UITableViewCell()
+        
         if (indexPath.row == 0){
         cell = tableView.dequeueReusableCellWithIdentifier("UserInfoCell", forIndexPath: indexPath)
-        let title = cell.viewWithTag(101) as! UILabel
-        title.opaque = false
-        title.backgroundColor = UIColor.clearColor()
-        title.text="Utkrisht"
-        let subTitle = cell.viewWithTag(102) as! UILabel
-        subTitle.text="Is the Best"
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+//        let title = cell.viewWithTag(101) as! UILabel
+//        title.opaque = false
+//        title.backgroundColor = UIColor.clearColor()
+//        title.text="Utkrisht"
+//        let subTitle = cell.viewWithTag(102) as! UILabel
+//        subTitle.text="Is the Best"
+        cell.backgroundView = UIImageView(image: UIImage(named: "BackGround")!)
         
-        let bg :UIImageView = UIImageView(frame: CGRectMake(20, 20, 277, 58))
-        bg.backgroundColor = UIColor.clearColor()
-        bg.opaque = false
-        bg.image = UIImage(named: "BackGround")
-        cell.backgroundView = bg
-            
-//        cell.backgroundColor = UIColor.redColor()
+//        let bg :UIImageView = UIImageView(frame: CGRectMake(20, 20, 277, 58))
+//        bg.backgroundColor = UIColor.clearColor()
+//        bg.opaque = false
+//        bg.image = UIImage(named: "BackGround")
+////      cell.contentView.addSubview(bg)
+//        cell.backgroundView = bg
+//        cell.contentView.addSubview(bg)
+//        title.text="Utkrisht"
         }
         else{
-            cell = tableView.dequeueReusableCellWithIdentifier("Topics", forIndexPath: indexPath)
-            cell.textLabel?.text="I am The King"
-            cell.opaque = false
+            
+            cell = tableView.dequeueReusableCellWithIdentifier("menu", forIndexPath: indexPath)
+            cell.textLabel?.text = TableArray[indexPath.row]
+            cell.imageView?.image = UIImage(named: "ic_contacts_white")
+            cell.backgroundColor = UIColor(red: 0x48/255, green: 0x48/255, blue: 0x48/255, alpha: 1);
+
         }
         return cell
     }
 
+//    override func set
+    
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -124,10 +139,11 @@ class SideTableViewController: UITableViewController {
     }
     */
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 0 {
-            
-        }
+
+        
         
     }
+    
+    
 
 }
