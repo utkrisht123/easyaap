@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E050E89A1C2542E200CA167A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E050E8991C2542E200CA167A /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E06D4B4C1C27E0B7009FE425 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06D4B4B1C27E0B7009FE425 /* SidebarViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		E06D4B4E1C280BFE009FE425 /* SideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06D4B4D1C280BFE009FE425 /* SideTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		E06D4B501C2836CB009FE425 /* SidebarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06D4B4F1C2836CB009FE425 /* SidebarTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		E08B40B71C21B74C006C1BC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B40B61C21B74C006C1BC3 /* AppDelegate.swift */; };
@@ -29,7 +28,6 @@
 		E050E8971C2542E100CA167A /* Gallery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gallery-Bridging-Header.h"; sourceTree = "<group>"; };
 		E050E8981C2542E200CA167A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		E050E8991C2542E200CA167A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		E06D4B4B1C27E0B7009FE425 /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		E06D4B4D1C280BFE009FE425 /* SideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideTableViewController.swift; sourceTree = "<group>"; };
 		E06D4B4F1C2836CB009FE425 /* SidebarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SidebarTableViewCell.swift; path = ../SidebarTableViewCell.swift; sourceTree = "<group>"; };
 		E08B40B31C21B74C006C1BC3 /* Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +82,6 @@
 				E0C4EFF21C22F3E300916182 /* IndividualViewController.swift */,
 				E08B40BA1C21B74C006C1BC3 /* Main.storyboard */,
 				E06D4B4D1C280BFE009FE425 /* SideTableViewController.swift */,
-				E06D4B4B1C27E0B7009FE425 /* SidebarViewController.swift */,
 				E0C2A12C1C24130700197F30 /* OrganizationViewController.swift */,
 				E0C2A12A1C23F51E00197F30 /* LoginViewController.swift */,
 				E0C2A1281C23E3AB00197F30 /* InitialViewController.swift */,
@@ -183,7 +180,6 @@
 				E050E89A1C2542E200CA167A /* SWRevealViewController.m in Sources */,
 				E06D4B4E1C280BFE009FE425 /* SideTableViewController.swift in Sources */,
 				E0C2A1291C23E3AB00197F30 /* InitialViewController.swift in Sources */,
-				E06D4B4C1C27E0B7009FE425 /* SidebarViewController.swift in Sources */,
 				E0C2A1311C24301700197F30 /* CourseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

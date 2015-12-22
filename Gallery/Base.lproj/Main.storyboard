@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gby-Oo-uCN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4cf-9F-mHc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -397,8 +397,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="up4-Ww-fWe">
-                        <barButtonItem key="leftBarButtonItem" title="My Courses" id="riZ-BS-bZg"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="RD1-zX-Nyf"/>
+                        <barButtonItem key="leftBarButtonItem" image="ic_keyboard_backspace_white" id="riZ-BS-bZg">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="RD1-zX-Nyf">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="Mycourses" destination="riZ-BS-bZg" id="x7r-xv-9MP"/>
@@ -407,6 +411,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2AH-2m-l9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2398" y="-158"/>
+        </scene>
+        <!--Modules List-->
+        <scene sceneID="63P-TF-GnD">
+            <objects>
+                <tableViewController id="zjJ-aE-Si7" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="r0c-OJ-q9H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="rUj-ST-GKz">
+                                <rect key="frame" x="0.0" y="92" width="600" height="110"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rUj-ST-GKz" id="uBm-Hi-JMv">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="109"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Python Django Training" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukM-NJ-z0M">
+                                            <rect key="frame" x="196" y="43" width="209" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="ukM-NJ-z0M" firstAttribute="centerX" secondItem="uBm-Hi-JMv" secondAttribute="centerX" id="cit-Qf-5Cw"/>
+                                        <constraint firstItem="ukM-NJ-z0M" firstAttribute="centerY" secondItem="uBm-Hi-JMv" secondAttribute="centerY" id="nyg-aW-4Ax"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zjJ-aE-Si7" id="PV2-fH-7bR"/>
+                            <outlet property="delegate" destination="zjJ-aE-Si7" id="R6e-k8-WrG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Modules List" id="81g-pg-WtT">
+                        <barButtonItem key="leftBarButtonItem" image="ic_keyboard_backspace_white" id="Gf9-Kd-TUW"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTO-Ay-lgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3758" y="-158"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="afe-vv-07n">
@@ -618,9 +666,28 @@
             </objects>
             <point key="canvasLocation" x="2521" y="537"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ylT-8e-toj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4cf-9F-mHc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hQd-tW-Tac">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zjJ-aE-Si7" kind="relationship" relationship="rootViewController" id="DZn-IM-lKb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arX-B9-GDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3100" y="-158"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Dennis Ritchie" width="144" height="145"/>
+        <image name="ic_keyboard_backspace_white" width="24" height="24"/>
         <image name="kvy" width="1446" height="518"/>
         <image name="login_page_F" width="1440" height="2560"/>
         <image name="logo" width="1366" height="342"/>

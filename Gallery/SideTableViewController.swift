@@ -10,9 +10,11 @@ import UIKit
 
 class SideTableViewController: UITableViewController {
     var TableArray = [String]()
+    var TableImage = [String]()
        override func viewDidLoad() {
         super.viewDidLoad()
         TableArray = ["","Home", "Contact", "Settings", "Logout"]
+        TableImage = ["","ic_home_white", "ic_contacts_white", "ic_settings_applications_white", "ic_exit_to_app_white"]
     tableView.separatorColor = UIColor .clearColor()
         self.view.backgroundColor = UIColor(red: 0x48/255, green: 0x48/255, blue: 0x48/255, alpha: 1)
         // Uncomment the following line to preserve selection between presentations
@@ -61,7 +63,7 @@ class SideTableViewController: UITableViewController {
         
         if (indexPath.row == 0){
         cell = tableView.dequeueReusableCellWithIdentifier("UserInfoCell", forIndexPath: indexPath)
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
 //        let title = cell.viewWithTag(101) as! UILabel
 //        title.opaque = false
 //        title.backgroundColor = UIColor.clearColor()
@@ -80,10 +82,11 @@ class SideTableViewController: UITableViewController {
 //        title.text="Utkrisht"
         }
         else{
-            
             cell = tableView.dequeueReusableCellWithIdentifier("menu", forIndexPath: indexPath)
             cell.textLabel?.text = TableArray[indexPath.row]
-            cell.imageView?.image = UIImage(named: "ic_contacts_white")
+             cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.textLabel?.textColor = UIColor.whiteColor()
+            cell.imageView?.image = UIImage(named: TableImage[indexPath.row])
             cell.backgroundColor = UIColor(red: 0x48/255, green: 0x48/255, blue: 0x48/255, alpha: 1);
 
         }
