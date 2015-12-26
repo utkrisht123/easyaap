@@ -18,10 +18,7 @@ class InitialViewController: UIViewController {
         self.navigationController!.navigationBar.translucent = false
         self.navigationController!.setNavigationBarHidden(true, animated: false)
         login.backgroundColor = UIColor.clearColor()
-        login.layer.cornerRadius = 5
-        login.layer.borderWidth = 1
-        login.layer.borderColor = UIColor.whiteColor().CGColor
-
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_page_F-1")!)
         // Do any additional setup after loading the view.
     }
 

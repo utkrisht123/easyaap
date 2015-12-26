@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gPC-g3-7N1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gby-Oo-uCN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -504,9 +504,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_page_F" translatesAutoresizingMaskIntoConstraints="NO" id="9Kj-CF-VF3">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1u7-iB-i8E">
                                 <rect key="frame" x="15" y="388" width="570" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -529,30 +526,17 @@
                                     <constraint firstAttribute="width" secondItem="WNz-qx-MDg" secondAttribute="height" multiplier="140:37" id="TAT-nB-Bu5"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWt-39-7Tx">
-                                <rect key="frame" x="267" y="444" width="67" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Explore">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WNz-qx-MDg" firstAttribute="centerY" secondItem="u9e-X9-hSO" secondAttribute="centerY" constant="-47" id="0w4-FR-mdi"/>
                             <constraint firstItem="qlP-g2-PMB" firstAttribute="top" secondItem="WNz-qx-MDg" secondAttribute="bottom" constant="20" id="4ED-Xa-BNT"/>
                             <constraint firstAttribute="trailing" secondItem="WNz-qx-MDg" secondAttribute="trailing" constant="20" id="58E-3E-kqv"/>
-                            <constraint firstItem="57j-4e-qmU" firstAttribute="top" secondItem="9Kj-CF-VF3" secondAttribute="bottom" id="7sP-dt-JmB"/>
-                            <constraint firstItem="9Kj-CF-VF3" firstAttribute="leading" secondItem="u9e-X9-hSO" secondAttribute="leading" id="BuF-U6-5zh"/>
                             <constraint firstItem="qlP-g2-PMB" firstAttribute="leading" secondItem="u9e-X9-hSO" secondAttribute="leading" constant="15" id="Cyw-xE-NXk"/>
-                            <constraint firstItem="pWt-39-7Tx" firstAttribute="top" secondItem="1u7-iB-i8E" secondAttribute="bottom" constant="20" id="JQU-RG-aLw"/>
                             <constraint firstItem="1u7-iB-i8E" firstAttribute="top" secondItem="qlP-g2-PMB" secondAttribute="bottom" constant="20" id="LU5-1c-KN4"/>
                             <constraint firstItem="WNz-qx-MDg" firstAttribute="leading" secondItem="u9e-X9-hSO" secondAttribute="leading" constant="20" id="PSw-ZW-Udi"/>
-                            <constraint firstItem="pWt-39-7Tx" firstAttribute="centerX" secondItem="u9e-X9-hSO" secondAttribute="centerX" id="QUt-sZ-LUD"/>
                             <constraint firstItem="WNz-qx-MDg" firstAttribute="centerX" secondItem="u9e-X9-hSO" secondAttribute="centerX" id="Wu5-wf-bA0"/>
                             <constraint firstItem="1u7-iB-i8E" firstAttribute="leading" secondItem="u9e-X9-hSO" secondAttribute="leading" constant="15" id="dVV-ff-vHe"/>
-                            <constraint firstItem="9Kj-CF-VF3" firstAttribute="top" secondItem="rJJ-Ot-Xt7" secondAttribute="bottom" id="eeG-Mw-jbF"/>
-                            <constraint firstAttribute="trailing" secondItem="9Kj-CF-VF3" secondAttribute="trailing" id="emC-Hg-P3x"/>
                             <constraint firstAttribute="trailing" secondItem="1u7-iB-i8E" secondAttribute="trailing" constant="15" id="tfg-qF-yHm"/>
                             <constraint firstAttribute="trailing" secondItem="qlP-g2-PMB" secondAttribute="trailing" constant="15" id="zuS-NW-4ZA"/>
                         </constraints>
@@ -722,7 +706,6 @@
         <image name="Dennis Ritchie" width="144" height="145"/>
         <image name="ic_keyboard_backspace_white" width="24" height="24"/>
         <image name="kvy" width="1446" height="518"/>
-        <image name="login_page_F" width="1440" height="2560"/>
         <image name="logo" width="1366" height="342"/>
     </resources>
 </document>
