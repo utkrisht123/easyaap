@@ -16,6 +16,7 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController!.navigationBar.barTintColor = UIColor(red: 0x2C/255, green: 0x3E/255, blue: 0x50/255, alpha: 1);
         self.navigationController!.navigationBar.translucent = false
+        self.navigationController!.setNavigationBarHidden(true, animated: false)
         login.backgroundColor = UIColor.clearColor()
         login.layer.cornerRadius = 5
         login.layer.borderWidth = 1
