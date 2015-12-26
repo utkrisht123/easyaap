@@ -415,13 +415,13 @@
         <!--Modules List-->
         <scene sceneID="63P-TF-GnD">
             <objects>
-                <tableViewController id="zjJ-aE-Si7" sceneMemberID="viewController">
+                <tableViewController id="zjJ-aE-Si7" customClass="ModulesTableViewController" customModule="Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="r0c-OJ-q9H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="rUj-ST-GKz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Coursename" rowHeight="110" id="rUj-ST-GKz">
                                 <rect key="frame" x="0.0" y="92" width="600" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rUj-ST-GKz" id="uBm-Hi-JMv">
@@ -439,6 +439,26 @@
                                     <constraints>
                                         <constraint firstItem="ukM-NJ-z0M" firstAttribute="centerX" secondItem="uBm-Hi-JMv" secondAttribute="centerX" id="cit-Qf-5Cw"/>
                                         <constraint firstItem="ukM-NJ-z0M" firstAttribute="centerY" secondItem="uBm-Hi-JMv" secondAttribute="centerY" id="nyg-aW-4Ax"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Modules" rowHeight="53" id="Sg4-U0-luP">
+                                <rect key="frame" x="0.0" y="202" width="600" height="53"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sg4-U0-luP" id="J2q-UZ-uex">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Scz-6c-mPU" customClass="CounterView" customModule="Gallery" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Scz-6c-mPU" secondAttribute="bottom" id="QMu-M7-8Fl"/>
+                                        <constraint firstItem="Scz-6c-mPU" firstAttribute="top" secondItem="J2q-UZ-uex" secondAttribute="top" id="YPP-wg-zzz"/>
+                                        <constraint firstItem="Scz-6c-mPU" firstAttribute="leading" secondItem="J2q-UZ-uex" secondAttribute="leading" id="pQ4-YD-mUT"/>
+                                        <constraint firstAttribute="trailing" secondItem="Scz-6c-mPU" secondAttribute="trailing" id="ukx-fM-fvF"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
