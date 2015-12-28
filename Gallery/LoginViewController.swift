@@ -13,32 +13,36 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var individual: UIView!
     @IBOutlet weak var organization: UIView!
     @IBOutlet weak var segment: UISegmentedControl!
+    var ilv : IndividualViewController = IndividualViewController()
     @IBAction func Segmentcontrol(sender: UISegmentedControl) {
-        
-        
-        
+
         
         switch segment.selectedSegmentIndex
         {
         case 0:
+            print("0")
             individual.hidden = false
             organization.hidden = true
+            break
         case 1:
+            print("1")
             individual.hidden = true
             organization.hidden = false
+            break
         default:
-            individual.hidden = false
-            organization.hidden = true
+            print("default")
+            individual.hidden = true
+            organization.hidden = false
+            break
         }
-        
-        
-        
         
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("ViewDidLoad")
+        segment.selectedSegmentIndex = 0
+        self.view.addSubview(individual)
         // Do any additional setup after loading the view.
     }
 
@@ -57,5 +61,6 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
