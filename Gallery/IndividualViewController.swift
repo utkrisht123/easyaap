@@ -13,7 +13,7 @@ class IndividualViewController: UIViewController {
     @IBOutlet weak var EmailTextFeild: UITextField!
     
     override func viewDidLoad() {
-    self.view.backgroundColor = UIColor.init(red: 0, green: 0.154, blue: 0.154, alpha: 1)
+    //self.view.backgroundColor = UIColor.init(red: 0, green: 0.154, blue: 0.154, alpha: 1)
         
         // Do any additional setup after loading the view.
     }

@@ -1,18 +1,22 @@
 //
-//  OrganizationViewController.swift
+//  CoursesNavigationViewController.swift
 //  Gallery
 //
-//  Created by For EveryOne on 18/12/15.
+//  Created by Utkrisht Mittal on 29/12/15.
 //  Copyright © 2015 For EveryOne. All rights reserved.
 //
 
 import UIKit
 
-class OrganizationViewController: UIViewController {
- 
+class CoursesNavigationViewController: UINavigationController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor.init(red: 0, green: 0.154, blue: 0.154, alpha: 1)
+        //self.navigationBar.barTintColor = UIColor(red: 0x2C/255, green: 0x3E/255, blue: 0x50/255, alpha: 1);
+        self.navigationBar.barTintColor = UIColor(red: 60.0/255.0, green: 83.0/255.0, blue: 205.0/255.0, alpha: 1)
+        self.navigationBar.translucent =  true
+        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName :UIColor.whiteColor()]
+
         // Do any additional setup after loading the view.
     }
 
@@ -20,6 +24,17 @@ class OrganizationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return false
+    }
+    
+    
+
     
 
     /*

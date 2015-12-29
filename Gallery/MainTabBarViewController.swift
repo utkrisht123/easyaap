@@ -1,18 +1,18 @@
 //
-//  OrganizationViewController.swift
+//  MainTabBarViewController.swift
 //  Gallery
 //
-//  Created by For EveryOne on 18/12/15.
+//  Created by Utkrisht Mittal on 29/12/15.
 //  Copyright © 2015 For EveryOne. All rights reserved.
 //
 
 import UIKit
 
-class OrganizationViewController: UIViewController {
- 
+class MainTabBarViewController: UITabBarController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor.init(red: 0, green: 0.154, blue: 0.154, alpha: 1)
+        
         // Do any additional setup after loading the view.
     }
 

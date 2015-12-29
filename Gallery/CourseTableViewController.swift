@@ -14,11 +14,10 @@ class CourseTableViewController: UITableViewController {
     var courses = [Course]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        Mycourses.target = self.revealViewController()
-        Mycourses.action = Selector("revealToggle:")
-        self.navigationController!.navigationBar.barTintColor = UIColor(red: 0x2C/255, green: 0x3E/255, blue: 0x50/255, alpha: 1);
-        self.navigationController!.navigationBar.translucent = false
-        loadSamplecourse()
+//        Mycourses.target = self.revealViewController()
+//        Mycourses.action = Selector("revealToggle:")
+        self.tableView.separatorColor = UIColor.clearColor()
+    loadSamplecourse()
     }
 //    override func viewDidAppear(animated: Bool) {
 //        super.viewDidAppear(animated)
@@ -49,8 +48,6 @@ class CourseTableViewController: UITableViewController {
         courses += [course1, course2, course3, course4, course5, course6]
     }
 
-   
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
        
         return 1
@@ -65,11 +62,14 @@ class CourseTableViewController: UITableViewController {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "CourseTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CourseTableViewCell
-        
+        let seprator : CALayer = CALayer(layer: cell)
+        seprator.backgroundColor = UIColor.whiteColor().CGColor
+        seprator.frame = CGRectMake(0,0,self.view.frame.size.width,1)
+        cell.layer.addSublayer(seprator)
         // Fetches the appropriate meal for the data source layout.
-        let course = courses[indexPath.row]
-        cell.Courseimage.image = course.photo
-                return cell
+        //let course = courses[indexPath.row]
+       //cell.backgroundColor = UIColor(patternImage: course.photo!)
+        return cell
     }
     
 }

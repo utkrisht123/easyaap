@@ -13,7 +13,7 @@ class SidebarTableViewCell: UITableViewCell {
     @IBOutlet weak var profilepic: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.profilepic.layer.cornerRadius = self.profilepic.frame.size.width / 2;
+       // self.profilepic.layer.cornerRadius = self.profilepic.frame.size.width / 2;
         self.profilepic.layer.borderColor = UIColor.whiteColor().CGColor
         self.profilepic.clipsToBounds = true;
         // Initialization code
