@@ -9,7 +9,8 @@
 import UIKit
 
 class ModulesTableViewController: UITableViewController {
-    
+
+   // @IBOutlet weak var MyCoursesTabBar: UITabBar!
     var TableArray = [String]()
     var TableImage = [String]()
     override func viewDidLoad() {
@@ -18,13 +19,13 @@ class ModulesTableViewController: UITableViewController {
         TableImage = ["","ic_home_white", "ic_contacts_white", "ic_settings_applications_white", "ic_exit_to_app_white"]
         tableView.separatorColor = UIColor .clearColor()
         self.view.backgroundColor = UIColor(red: 0x48/255, green: 0x48/255, blue: 0x48/255, alpha: 1)
+      //print(MyCoursesTabBar.selectedItem)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,6 +35,7 @@ class ModulesTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     func configureTableView() {
+        //print(MyCoursesTabBar.selectedItem)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 500
     }
@@ -65,6 +67,10 @@ class ModulesTableViewController: UITableViewController {
                         
         }
         return cell
+    }
+    @IBAction func BackButton(sender: UIBarButtonItem) {
+        self.navigationController?.pushViewController(self.storyboard!.instantiateViewControllerWithIdentifier("MyCourseView") as UIViewController, animated: true)
+       
     }
     
     //    override func set

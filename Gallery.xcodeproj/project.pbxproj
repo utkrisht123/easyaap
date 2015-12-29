@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2BCC91061C3257D5006369DD /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC91051C3257D5006369DD /* MainTabBarViewController.swift */; };
 		2BCC91081C326DF7006369DD /* CoursesNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC91071C326DF7006369DD /* CoursesNavigationViewController.swift */; };
+		2BCC910A1C32BEDC006369DD /* ChaterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC91091C32BEDC006369DD /* ChaterTableViewController.swift */; };
 		E00E067C1C2988FF00DFAFBF /* ModulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E067B1C2988FF00DFAFBF /* ModulesTableViewController.swift */; };
 		E00E067E1C298F7300DFAFBF /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E067D1C298F7300DFAFBF /* CounterView.swift */; };
 		E050E89A1C2542E200CA167A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E050E8991C2542E200CA167A /* SWRevealViewController.m */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		2BCC91051C3257D5006369DD /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		2BCC91071C326DF7006369DD /* CoursesNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesNavigationViewController.swift; sourceTree = "<group>"; };
+		2BCC91091C32BEDC006369DD /* ChaterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaterTableViewController.swift; sourceTree = "<group>"; };
 		E00E067B1C2988FF00DFAFBF /* ModulesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModulesTableViewController.swift; sourceTree = "<group>"; };
 		E00E067D1C298F7300DFAFBF /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		E050E8971C2542E100CA167A /* Gallery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gallery-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -90,12 +92,14 @@
 				E0C4EFF21C22F3E300916182 /* IndividualViewController.swift */,
 				E00E067D1C298F7300DFAFBF /* CounterView.swift */,
 				E08B40BA1C21B74C006C1BC3 /* Main.storyboard */,
+				2BCC91091C32BEDC006369DD /* ChaterTableViewController.swift */,
 				2BCC91051C3257D5006369DD /* MainTabBarViewController.swift */,
 				E06D4B4D1C280BFE009FE425 /* SideTableViewController.swift */,
 				E0C2A12C1C24130700197F30 /* OrganizationViewController.swift */,
 				E0C2A12A1C23F51E00197F30 /* LoginViewController.swift */,
 				E0C2A1281C23E3AB00197F30 /* InitialViewController.swift */,
 				E0C2A12E1C24301700197F30 /* CourseTableViewCell.swift */,
+				E00E067B1C2988FF00DFAFBF /* ModulesTableViewController.swift */,
 				E0C2A12F1C24301700197F30 /* CourseTableViewController.swift */,
 				2BCC91071C326DF7006369DD /* CoursesNavigationViewController.swift */,
 				E050E8981C2542E200CA167A /* SWRevealViewController.h */,
@@ -105,7 +109,6 @@
 				E08B40BF1C21B74C006C1BC3 /* LaunchScreen.storyboard */,
 				E08B40C21C21B74C006C1BC3 /* Info.plist */,
 				E050E8971C2542E100CA167A /* Gallery-Bridging-Header.h */,
-				E00E067B1C2988FF00DFAFBF /* ModulesTableViewController.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				2BCC91081C326DF7006369DD /* CoursesNavigationViewController.swift in Sources */,
 				E0C4EFF31C22F3E300916182 /* IndividualViewController.swift in Sources */,
 				E00E067E1C298F7300DFAFBF /* CounterView.swift in Sources */,
+				2BCC910A1C32BEDC006369DD /* ChaterTableViewController.swift in Sources */,
 				E0C2A1321C24301700197F30 /* CourseTableViewController.swift in Sources */,
 				E00E067C1C2988FF00DFAFBF /* ModulesTableViewController.swift in Sources */,
 				E08B40B71C21B74C006C1BC3 /* AppDelegate.swift in Sources */,

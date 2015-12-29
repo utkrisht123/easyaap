@@ -16,6 +16,7 @@ class CoursesNavigationViewController: UINavigationController {
         self.navigationBar.barTintColor = UIColor(red: 60.0/255.0, green: 83.0/255.0, blue: 205.0/255.0, alpha: 1)
         self.navigationBar.translucent =  true
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName :UIColor.whiteColor()]
+        self.navigationBar.tintColor = UIColor.whiteColor()
 
         // Do any additional setup after loading the view.
     }

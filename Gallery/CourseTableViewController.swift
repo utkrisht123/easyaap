@@ -16,6 +16,7 @@ class CourseTableViewController: UITableViewController {
         super.viewDidLoad()
 //        Mycourses.target = self.revealViewController()
 //        Mycourses.action = Selector("revealToggle:")
+        self.navigationController?.navigationItem.leftBarButtonItems = nil
         self.tableView.separatorColor = UIColor.clearColor()
     loadSamplecourse()
     }
@@ -28,6 +29,7 @@ class CourseTableViewController: UITableViewController {
       
         
         let photo1 = UIImage(named: "kvy")!
+        
         let course1 = Course(photo: photo1)!
         
         let photo2 = UIImage(named: "kvy")!
@@ -67,9 +69,16 @@ class CourseTableViewController: UITableViewController {
         seprator.frame = CGRectMake(0,0,self.view.frame.size.width,1)
         cell.layer.addSublayer(seprator)
         // Fetches the appropriate meal for the data source layout.
-        //let course = courses[indexPath.row]
-       //cell.backgroundColor = UIColor(patternImage: course.photo!)
+        let course = courses[indexPath.row]
+        let destinationSize : CGSize = CGSize(width: self.view.frame.width, height: 119)
+        UIGraphicsBeginImageContext(destinationSize)
+        course.photo!.drawInRect(CGRectMake(0,0,destinationSize.width,destinationSize.height))
+        let newPhoto :UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        let bfImage :UIColor = UIColor(patternImage:newPhoto)
+       cell.backgroundColor = bfImage
         return cell
     }
+ 
     
 }
