@@ -1,8 +1,8 @@
 //
 //  CourseTableViewCell.swift
-//  easylearningfinal
+//  Gallery
 //
-//  Created by For EveryOne on 02/12/15.
+//  Created by Utkrisht Mittal on 29/12/15.
 //  Copyright © 2015 For EveryOne. All rights reserved.
 //
 
@@ -10,10 +10,6 @@ import UIKit
 
 class CourseTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var Courseimage: UIImageView!
-    
-
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -1,5 +1,5 @@
 //
-//  CoursesNavigationViewController.swift
+//  ContactUsViewController.swift
 //  Gallery
 //
 //  Created by Utkrisht Mittal on 29/12/15.
@@ -8,31 +8,17 @@
 
 import UIKit
 
-class CoursesNavigationViewController: UINavigationController {
+class ContactUsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.barTintColor = UIColor(red: 48.0/255.0, green: 95.0/255.0, blue: 230.0/255.0, alpha: 1)
-        self.navigationBar.translucent =  true
-        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName :UIColor.whiteColor()]
-        self.navigationBar.tintColor = UIColor.whiteColor()
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return false
-    }
-    
-    
-
     
 
     /*

@@ -10,6 +10,8 @@
 		2BCC91061C3257D5006369DD /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC91051C3257D5006369DD /* MainTabBarViewController.swift */; };
 		2BCC91081C326DF7006369DD /* CoursesNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC91071C326DF7006369DD /* CoursesNavigationViewController.swift */; };
 		2BCC910A1C32BEDC006369DD /* ChaterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC91091C32BEDC006369DD /* ChaterTableViewController.swift */; };
+		2BCC910C1C32E8FD006369DD /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC910B1C32E8FD006369DD /* ContactUsViewController.swift */; };
+		2BCC910E1C32EB93006369DD /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC910D1C32EB93006369DD /* CourseTableViewCell.swift */; };
 		E00E067C1C2988FF00DFAFBF /* ModulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E067B1C2988FF00DFAFBF /* ModulesTableViewController.swift */; };
 		E00E067E1C298F7300DFAFBF /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E067D1C298F7300DFAFBF /* CounterView.swift */; };
 		E050E89A1C2542E200CA167A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E050E8991C2542E200CA167A /* SWRevealViewController.m */; };
@@ -23,7 +25,6 @@
 		E0C2A1291C23E3AB00197F30 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C2A1281C23E3AB00197F30 /* InitialViewController.swift */; };
 		E0C2A12B1C23F51E00197F30 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C2A12A1C23F51E00197F30 /* LoginViewController.swift */; };
 		E0C2A12D1C24130700197F30 /* OrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C2A12C1C24130700197F30 /* OrganizationViewController.swift */; };
-		E0C2A1311C24301700197F30 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C2A12E1C24301700197F30 /* CourseTableViewCell.swift */; };
 		E0C2A1321C24301700197F30 /* CourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C2A12F1C24301700197F30 /* CourseTableViewController.swift */; };
 		E0C2A1331C24301700197F30 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C2A1301C24301700197F30 /* Course.swift */; };
 		E0C4EFF31C22F3E300916182 /* IndividualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4EFF21C22F3E300916182 /* IndividualViewController.swift */; };
@@ -33,6 +34,8 @@
 		2BCC91051C3257D5006369DD /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		2BCC91071C326DF7006369DD /* CoursesNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesNavigationViewController.swift; sourceTree = "<group>"; };
 		2BCC91091C32BEDC006369DD /* ChaterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaterTableViewController.swift; sourceTree = "<group>"; };
+		2BCC910B1C32E8FD006369DD /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		2BCC910D1C32EB93006369DD /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		E00E067B1C2988FF00DFAFBF /* ModulesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModulesTableViewController.swift; sourceTree = "<group>"; };
 		E00E067D1C298F7300DFAFBF /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		E050E8971C2542E100CA167A /* Gallery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gallery-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		E0C2A1281C23E3AB00197F30 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		E0C2A12A1C23F51E00197F30 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E0C2A12C1C24130700197F30 /* OrganizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationViewController.swift; sourceTree = "<group>"; };
-		E0C2A12E1C24301700197F30 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		E0C2A12F1C24301700197F30 /* CourseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
 		E0C2A1301C24301700197F30 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		E0C4EFF21C22F3E300916182 /* IndividualViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualViewController.swift; sourceTree = "<group>"; };
@@ -92,16 +94,17 @@
 				E0C4EFF21C22F3E300916182 /* IndividualViewController.swift */,
 				E00E067D1C298F7300DFAFBF /* CounterView.swift */,
 				E08B40BA1C21B74C006C1BC3 /* Main.storyboard */,
+				2BCC910B1C32E8FD006369DD /* ContactUsViewController.swift */,
 				2BCC91091C32BEDC006369DD /* ChaterTableViewController.swift */,
 				2BCC91051C3257D5006369DD /* MainTabBarViewController.swift */,
 				E06D4B4D1C280BFE009FE425 /* SideTableViewController.swift */,
 				E0C2A12C1C24130700197F30 /* OrganizationViewController.swift */,
 				E0C2A12A1C23F51E00197F30 /* LoginViewController.swift */,
 				E0C2A1281C23E3AB00197F30 /* InitialViewController.swift */,
-				E0C2A12E1C24301700197F30 /* CourseTableViewCell.swift */,
 				E00E067B1C2988FF00DFAFBF /* ModulesTableViewController.swift */,
 				E0C2A12F1C24301700197F30 /* CourseTableViewController.swift */,
 				2BCC91071C326DF7006369DD /* CoursesNavigationViewController.swift */,
+				2BCC910D1C32EB93006369DD /* CourseTableViewCell.swift */,
 				E050E8981C2542E200CA167A /* SWRevealViewController.h */,
 				E050E8991C2542E200CA167A /* SWRevealViewController.m */,
 				E0C2A1301C24301700197F30 /* Course.swift */,
@@ -145,6 +148,11 @@
 				TargetAttributes = {
 					E08B40B21C21B74C006C1BC3 = {
 						CreatedOnToolsVersion = 7.0.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -198,9 +206,10 @@
 				E06D4B501C2836CB009FE425 /* SidebarTableViewCell.swift in Sources */,
 				E0C2A12D1C24130700197F30 /* OrganizationViewController.swift in Sources */,
 				E050E89A1C2542E200CA167A /* SWRevealViewController.m in Sources */,
+				2BCC910E1C32EB93006369DD /* CourseTableViewCell.swift in Sources */,
 				E06D4B4E1C280BFE009FE425 /* SideTableViewController.swift in Sources */,
 				E0C2A1291C23E3AB00197F30 /* InitialViewController.swift in Sources */,
-				E0C2A1311C24301700197F30 /* CourseTableViewCell.swift in Sources */,
+				2BCC910C1C32E8FD006369DD /* ContactUsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

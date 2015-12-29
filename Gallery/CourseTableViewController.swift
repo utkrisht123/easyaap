@@ -16,7 +16,7 @@ class CourseTableViewController: UITableViewController {
         super.viewDidLoad()
 //        Mycourses.target = self.revealViewController()
 //        Mycourses.action = Selector("revealToggle:")
-        self.navigationController?.navigationItem.leftBarButtonItems = nil
+        self.navigationController?.navigationItem.hidesBackButton = true
         self.tableView.separatorColor = UIColor.clearColor()
     loadSamplecourse()
     }
