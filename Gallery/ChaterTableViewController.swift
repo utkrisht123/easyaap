@@ -9,10 +9,16 @@
 import UIKit
 
 class ChaterTableViewController: UITableViewController {
-
+var bookArray = [String]()
+    var assignment = [String]()
+    var video = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bookArray = ["Intro","Book1", "Book2", "Book3", "Book4"]
+        
+        assignment = ["Intro","Assignment1", "Assignment2", "Assignment3", "Assignment4"]
+        video = ["Intro","Video1", "Video2", "Video3", "Video4"]
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,23 +35,61 @@ class ChaterTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        var n = bookArray.count + assignment.count + video.count + 3
+        return 5
+        
     }
 
-    /*
+   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+    var cell : UITableViewCell = UITableViewCell()
+    
+     if (indexPath.row >= 0 && indexPath.row <= bookArray.count)
+     {
+    cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
+    
+    cell.textLabel?.text = bookArray[indexPath.row]
+    cell.selectionStyle = UITableViewCellSelectionStyle.None
+    cell.textLabel?.textColor = UIColor.whiteColor()
+    cell.backgroundColor = UIColor(red: 0x48/255, green: 0x48/255, blue: 0x48/255, alpha: 1);
+        }
+         else if (indexPath.row == bookArray.count + 1)
+     {
+        cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = "Videos"
+        
+        }
+        else if (indexPath.row >= (bookArray.count + 2) && indexPath.row <= (bookArray.count + video.count + 2))
+     {
+        cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = video[indexPath.row]
+        }
+        
+        
+     else if (indexPath.row == bookArray.count + video.count + 3)
+     {
+        cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = "Assignment"
+        
+     }
+        else if (indexPath.row >= (bookArray.count + video.count + 3) && indexPath.row <= (bookArray.count + video.count + assignment.count + 3))
+     {
+        cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = assignment[indexPath.row]
 
-        // Configure the cell...
-
-        return cell
+        }
+    return cell
     }
-    */
+   
 
     /*
     // Override to support conditional editing of the table view.
