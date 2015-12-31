@@ -12,10 +12,16 @@ class IndividualViewController: UIViewController {
    
     @IBOutlet weak var EmailTextFeild: UITextField!
     @IBOutlet weak var PasswordTextFeild: UITextField!
+    let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
     override func viewDidLoad() {
     //self.view.backgroundColor = UIColor.init(red: 0, green: 0.154, blue: 0.154, alpha: 1)
         
         // Do any additional setup after loading the view.
+        actInd.frame = CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height);
+        actInd.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+        actInd.center = self.view.center
+        actInd.hidesWhenStopped = true
+        actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,12 +29,7 @@ class IndividualViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func IndividualLogin(sender: AnyObject) {
-        let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
-        actInd.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
-        actInd.center = self.view.center
-        actInd.hidesWhenStopped = true
-        actInd.activityIndicatorViewStyle =
-            UIActivityIndicatorViewStyle.Gray
+        if Reachability.isConnectedToNetwork(){
         self.view.addSubview(actInd)
         actInd.startAnimating()
         let email_id = EmailTextFeild.text!
@@ -37,32 +38,55 @@ class IndividualViewController: UIViewController {
         request.HTTPMethod = "POST"
         let postString = "username=\(email_id)&password=\(password)"
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        let semaphore = dispatch_semaphore_create(0)
-        _ = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
-            actInd.startAnimating()
+        //let semaphore = dispatch_semaphore_create(0)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
-                print("error=\(error)")
-                let AletView: UIAlertController = UIAlertController(title: "Error", message: "Sorry!! Something Went Wrong!!", preferredStyle: .Alert)
-                self.addChildViewController(AletView)
+                self.actInd.stopAnimating()
+                let AletView: UIAlertController = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .Alert)
+                let ok : UIAlertAction = UIAlertAction(title: "OK", style: .Default, handler: { (ok) -> Void in
+                    AletView.dismissViewControllerAnimated(true, completion: nil)
+                })
+                AletView.addAction(ok)
+                self.presentViewController(AletView, animated: true, completion:nil)
                 return
             }
             
             if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {           // check for http errors
-                let AletView: UIAlertController = UIAlertController(title: "Error", message: "Sorry!! Something Went Wrong!! Try Again!!", preferredStyle: .Alert)
-                self.addChildViewController(AletView)
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response)")
-                actInd.stopAnimating()
+                self.actInd.stopAnimating()
+                let AletView: UIAlertController = UIAlertController(title: "Error", message: "We got HTTP Status Code \(httpStatus.statusCode)", preferredStyle: .Alert)
+                let ok : UIAlertAction = UIAlertAction(title: "OK", style: .Default, handler: { (ok) -> Void in
+                    AletView.dismissViewControllerAnimated(true, completion: nil)
+                })
+                AletView.addAction(ok)
+                self.presentViewController(AletView, animated: true, completion:nil)
             }
            
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print("responseString = \(responseString)")
-            dispatch_semaphore_signal(semaphore)
-            print(1)
-        }.resume()
-        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
-        print(2)
-        actInd.stopAnimating()
+           // dispatch_semaphore_signal(semaphore)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                if data?.length > 0 {
+                self.actInd.stopAnimating()
+                print(1)
+                }
+            })
+            
+        }
+        //dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+        
+        task.resume()
+        }
+        else
+        {
+            self.actInd.stopAnimating()
+            let AletView: UIAlertController = UIAlertController(title: "Error", message: "Sorry you are connected to internet.", preferredStyle: .Alert)
+            let ok : UIAlertAction = UIAlertAction(title: "OK", style: .Default, handler: { (ok) -> Void in
+                AletView.dismissViewControllerAnimated(true, completion: nil)
+            })
+            AletView.addAction(ok)
+            self.presentViewController(AletView, animated: true, completion:nil)
+        }
     }
     
 
