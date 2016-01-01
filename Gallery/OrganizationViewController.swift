@@ -32,7 +32,7 @@ class OrganizationViewController: UIViewController {
             actInd.startAnimating()
             let email_id = EmailTextFeild.text!
             let password = PasswordTextFeild.text!
-            let request = NSMutableURLRequest(URL: NSURL(string: "http://gyansha.co.in/easylearning/student/lms/OAuthLogin/individual")!)
+            let request = NSMutableURLRequest(URL: NSURL(string: "http://gyansha.co.in/easylearning/student/lms/OAuthLogin/organization")!)
             request.HTTPMethod = "POST"
             let postString = "username=\(email_id)&password=\(password)"
             request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)

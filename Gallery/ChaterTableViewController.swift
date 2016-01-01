@@ -12,14 +12,19 @@ class ChaterTableViewController: UITableViewController {
 var bookArray = [String]()
     var assignment = [String]()
     var video = [String]()
+//     let section = [Videos, Assignment, Books]
     override func viewDidLoad() {
         super.viewDidLoad()
         bookArray = ["Intro","Book1", "Book2", "Book3", "Book4"]
+        print(bookArray.count)
         
         assignment = ["Intro","Assignment1", "Assignment2", "Assignment3", "Assignment4"]
         video = ["Intro","Video1", "Video2", "Video3", "Video4"]
+       
+      
         
-        // Uncomment the following line to preserve selection between presentations
+        let item = [["Intro","Book1", "Book2", "Book3", "Book4"], ["Intro","Book1", "Book2", "Book3", "Book4"],["Intro","Book1", "Book2", "Book3", "Book4"]]
+// Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -35,21 +40,20 @@ var bookArray = [String]()
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 3
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        var n = bookArray.count + assignment.count + video.count + 3
-        return 5
+        return 14
         
     }
-
+   
    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     var cell : UITableViewCell = UITableViewCell()
     
-     if (indexPath.row >= 0 && indexPath.row <= bookArray.count)
+     if (indexPath.row >= 0 && indexPath.row <= bookArray.count - 1)
      {
     cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
     
@@ -57,36 +61,37 @@ var bookArray = [String]()
     cell.selectionStyle = UITableViewCellSelectionStyle.None
     cell.textLabel?.textColor = UIColor.whiteColor()
     cell.backgroundColor = UIColor(red: 0x48/255, green: 0x48/255, blue: 0x48/255, alpha: 1);
-        }
-         else if (indexPath.row == bookArray.count + 1)
-     {
-        cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
-        
-        cell.textLabel?.text = "Videos"
         
         }
-        else if (indexPath.row >= (bookArray.count + 2) && indexPath.row <= (bookArray.count + video.count + 2))
-     {
-        cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
-        
-        cell.textLabel?.text = video[indexPath.row]
-        }
-        
-        
-     else if (indexPath.row == bookArray.count + video.count + 3)
-     {
-        cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
-        
-        cell.textLabel?.text = "Assignment"
-        
-     }
-        else if (indexPath.row >= (bookArray.count + video.count + 3) && indexPath.row <= (bookArray.count + video.count + assignment.count + 3))
-     {
-        cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
-        
-        cell.textLabel?.text = assignment[indexPath.row]
-
-        }
+//         else if (indexPath.row == bookArray.count)
+//     {
+//        cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
+//        
+//        cell.textLabel?.text = "Videos"
+//        
+//        }
+//        else if (indexPath.row >= (bookArray.count + 1) && indexPath.row <= (bookArray.count + video.count))
+//     {
+//        cell = tableView.dequeueReusableCellWithIdentifier("moduledetail", forIndexPath: indexPath)
+//        
+//        cell.textLabel?.text = video[indexPath.row]
+//        }
+//        
+//        
+//     else if (indexPath.row == bookArray.count + video.count + 3)
+//     {
+//        cell = tableView.dequeueReusableCellWithIdentifier("video", forIndexPath: indexPath)
+//        
+//        cell.textLabel?.text = "Assignment"
+//        
+//     }
+//        else if (indexPath.row >= (bookArray.count + video.count + 3) && indexPath.row <= (bookArray.count + video.count + assignment.count + 3))
+//     {
+//        cell = tableView.dequeueReusableCellWithIdentifier("assignment", forIndexPath: indexPath)
+//        
+//        cell.textLabel?.text = assignment[indexPath.row]
+//
+//        }
     return cell
     }
    

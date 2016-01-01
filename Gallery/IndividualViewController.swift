@@ -64,7 +64,7 @@ class IndividualViewController: UIViewController {
            
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print("responseString = \(responseString)")
-           // dispatch_semaphore_signal(semaphore)
+            // dispatch_semaphore_signal(semaphore)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if data?.length > 0 {
                 self.actInd.stopAnimating()
