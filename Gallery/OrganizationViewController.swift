@@ -13,6 +13,7 @@ class OrganizationViewController: UIViewController {
     @IBOutlet weak var PasswordTextFeild: UITextField!
     @IBOutlet weak var EmailTextFeild: UITextField!
     let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
+    var data : NSData?
     override func viewDidLoad() {
         super.viewDidLoad()
         actInd.frame = CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height);
@@ -61,11 +62,15 @@ class OrganizationViewController: UIViewController {
                 }
                 
                 let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                print("responseString = \(responseString)")
+                //print("responseString = \(responseString)")
                 // dispatch_semaphore_signal(semaphore)
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     if data?.length > 0 {
                         self.actInd.stopAnimating()
+                        let svc = self.storyboard?.instantiateViewControllerWithIdentifier("2") as! MainTabBarViewController
+                        svc.data = data
+                        self.performSegueWithIdentifier("2", sender: self)
+                        self.data = data
                         print(1)
                     }
                 })
@@ -89,14 +94,20 @@ class OrganizationViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "segueTest") {
+            let svc = segue.destinationViewController as! MainTabBarViewController;
+            svc.data = self.data
+            print(svc.data)
+            
+        }
     }
-    */
+
 
 }
