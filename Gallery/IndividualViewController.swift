@@ -64,7 +64,9 @@ class IndividualViewController: UIViewController {
            
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print("responseString = \(responseString)")
-            // dispatch_semaphore_signal(semaphore)
+//           let resul = NSDictionary(responseString)
+//           let JSONDictionary: Dictionary = NSJSONSerialization.JSONObjectWithData(data!, options: nil) as NSDictionary
+           // dispatch_semaphore_signal(semaphore)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if data?.length > 0 {
                 self.actInd.stopAnimating()
