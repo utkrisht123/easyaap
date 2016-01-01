@@ -9,10 +9,12 @@
 import UIKit
 
 class MainTabBarViewController: UITabBarController {
+    
+    var data : NSData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(data)
         // Do any additional setup after loading the view.
     }
 
