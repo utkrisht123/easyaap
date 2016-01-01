@@ -14,9 +14,6 @@ class IndividualViewController: UIViewController {
     @IBOutlet weak var PasswordTextFeild: UITextField!
     let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
     override func viewDidLoad() {
-    //self.view.backgroundColor = UIColor.init(red: 0, green: 0.154, blue: 0.154, alpha: 1)
-        
-        // Do any additional setup after loading the view.
         actInd.frame = CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height);
         actInd.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
         actInd.center = self.view.center
@@ -38,8 +35,7 @@ class IndividualViewController: UIViewController {
         request.HTTPMethod = "POST"
         let postString = "username=\(email_id)&password=\(password)"
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        //let semaphore = dispatch_semaphore_create(0)
-        
+    
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
                 self.actInd.stopAnimating()
@@ -62,11 +58,9 @@ class IndividualViewController: UIViewController {
                 self.presentViewController(AletView, animated: true, completion:nil)
             }
            
-            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print("responseString = \(responseString)")
-//           let resul = NSDictionary(responseString)
-//           let JSONDictionary: Dictionary = NSJSONSerialization.JSONObjectWithData(data!, options: nil) as NSDictionary
-           // dispatch_semaphore_signal(semaphore)
+            let svc = self.storyboard?.instantiateViewControllerWithIdentifier("2") as! MainTabBarViewController
+            svc.data = data
+            self.presentViewController(svc, animated: false, completion: nil)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if data?.length > 0 {
                 self.actInd.stopAnimating()
@@ -75,8 +69,6 @@ class IndividualViewController: UIViewController {
             })
             
         }
-        //dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
-        
         task.resume()
         }
         else

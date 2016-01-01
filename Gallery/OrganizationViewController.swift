@@ -61,23 +61,17 @@ class OrganizationViewController: UIViewController {
                     self.presentViewController(AletView, animated: true, completion:nil)
                 }
                 
-                let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                //print("responseString = \(responseString)")
-                // dispatch_semaphore_signal(semaphore)
+                let svc = self.storyboard?.instantiateViewControllerWithIdentifier("2") as! MainTabBarViewController
+                svc.data = data
+                self.presentViewController(svc, animated: false, completion: nil)
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     if data?.length > 0 {
-                        self.actInd.stopAnimating()
-                        let svc = self.storyboard?.instantiateViewControllerWithIdentifier("2") as! MainTabBarViewController
-                        svc.data = data
-                        self.performSegueWithIdentifier("2", sender: self)
                         self.data = data
-                        print(1)
+                        self.actInd.stopAnimating()
                     }
                 })
                 
             }
-            //dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
-            
             task.resume()
         }
         else
@@ -92,7 +86,6 @@ class OrganizationViewController: UIViewController {
         }
 
     }
-    
 
     
     // MARK: - Navigation
